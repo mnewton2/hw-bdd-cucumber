@@ -35,6 +35,11 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
   And I should see "When Harry Met Sally"
   And I should see "The Terminator"
   # enter step(s) to ensure that other movies are not visible
+  Then I should not see "Chicken Run"
+  And I should not see "Aladdin"
+  And I should not see "Chocolat"
+  And I should not see "The Help"
+  And I should not see "2001: A Space Odyssey"
 
 Scenario: all ratings selected
   When I check the following ratings: G PG PG-13 R NC-17
