@@ -35,5 +35,5 @@ end
 
 Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
-  fail "Unimplemented"
+  Movie.all.each{|movie| step %{I should see "#{movie.title}"}}
 end
